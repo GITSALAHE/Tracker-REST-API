@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/head') -%>
+  <body>
+    <header>
+      <h1>Exercise Tracker API</h1>
+      <h2>Created by <a href="https://autumnbullard-portfolio.herokuapp.com" target="_blank">Autumn Bullard</a> &copy; <%= new Date().getFullYear(); %></h2>
+      <p>My project for the <a href="https://learn.freecodecamp.org/apis-and-microservices/apis-and-microservices-projects/exercise-tracker" target="_blank">Exercise Tracker challenge</a> as part of the curriculum for the Apis and Microservices Certification on <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp</a>.</p>
+      <p>View the <a href="https://github.com/autumnchris/exercise-tracker-api" target="_blank">source code</a> for this project.</p>
+      <hr>
+    </header>
+    <main>
+      <h3>Project Usage</h3>
+      <h4>Create a User</h4>
+      <p>Create a username in the form below to get a corresponding user ID that you can use to add exercises for that registered user.</p>
+      <form class="new-user" action="/api/exercise/new-user" method="post">
+        <div class="form-group">
+          <label for="user">Username</label>
+          <input type="text" name="newUser" id="user" required>
+        </div>
+        <div class="button-group">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+      <h4>Add Exercise</h4>
+      <p>Add an exercise in the form below for a registered user.</p>
+      <form class="add-exercise" action="/api/exercise/add" method="post">
+        <div class="form-group">
+          <label for="user-id">User ID*</label>
+          <input type="text" name="userId" id="user-id" required>
+        </div>
+        <div class="form-group">
+          <label for="description">Description*</label>
+          <input type="text" name="description" id="description" required>
+        </div>
+        <div class="form-group">
+          <label for="duration">Duration (in minutes)*</label>
+          <input type="text" name="duration" id="duration" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Date (leave blank to submit current date)</label>
+          <input type="text" name="date" placeholder="YYYY-MM-DD" id="date">
+        </div>
+        <div class="button-group">
+          <input type="submit" value="Submit">
+        </div>
+      </form>
+      <h4>Get a List of Users</h4>
+      <p>To get a list of all the registered users, go to the path:</p>
+<pre><code>/api/exercise/users</code></pre>
+      <h4>Get Exercise Data for a User</h4>
+      <p>To get data for a specific user, go to the path:</p>
+<pre><code>/api/exercise/log</code></pre>
+      <p>and then add a parameter of the user's ID. For example, if I wanted to get the data for a user whose ID is <code>5bea63e40f02c48aab5f0e38</code>, I would go to the path:</p>
+<pre><code>/api/exercise/log/5bea63e40f02c48aab5f0e38</code></pre>
+      <p>I can also filter the list of exercise logs that get returned. I can limit the quantity of logs by adding a query input to the path such as:</p>
+<pre><code>/api/exercise/log/5bea63e40f02c48aab5f0e38?limit=2</code></pre>
+      <p>I can also return logs within a specific date range such as:</p>
+<pre><code>/api/exercise/log/5bea63e40f02c48aab5f0e38?from=2013-10-31&to=2019-12-25</code></pre>
+      <p>I can also both limit the quantity as well as select a date range such as:</p>
+<pre><code>/api/exercise/log/5bea63e40f02c48aab5f0e38?from=2013-10-31&to=2019-12-25&limit=2</code></pre>
+    </main>
+  </body>
+</html>

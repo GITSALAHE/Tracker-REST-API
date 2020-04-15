@@ -1,0 +1,111 @@
+html {
+  background: hsl(0, 0%, 11%);
+  background: linear-gradient(120deg, hsl(0, 0%, 11%), hsl(270, 18%, 19%)) fixed;
+}
+
+p {
+  line-height: 24px;
+  margin: 15px 0 10px;
+}
+
+a,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  color: hsl(270, 100%, 85%);
+}
+
+code,
+pre {
+  background: hsl(270, 100%, 95%);
+  color: hsl(270, 100%, 30%);
+}
+
+hr {
+  border-bottom: 1px solid hsla(0, 0%, 100%, 0.6);
+}
+
+header {
+  margin: auto;
+  max-width: 600px;
+  padding-top: 40px;
+}
+
+h1 {
+  font-size: 1.7rem;
+  letter-spacing: 4px;
+  line-height: 1.2;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1rem;
+  line-height: 1.2;
+  padding: 18px 0;
+  text-align: center;
+}
+
+main {
+  margin: auto;
+  max-width: 600px;
+  padding-bottom: 80px;
+}
+
+h3 {
+  font-size: 1.4rem;
+  letter-spacing: 3px;
+  line-height: 1.2;
+  padding: 30px 0 10px;
+  text-align: center;
+}
+
+h4 {
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  line-height: 1.2;
+  padding-top: 10px;
+}
+
+form {
+  padding-bottom: 25px;
+}
+
+.form-group {
+  padding-top: 20px;
+}
+
+label {
+  display: block;
+}
+
+input[type=text] {
+  background: hsl(0, 0%, 100%);
+  border-radius: 3px;
+  color: hsl(0, 0%, 20%);
+  margin-top: 8px;
+  max-width: 400px;
+  padding: 8px;
+  width: 100%;
+}
+
+input[type=submit] {
+  background: hsl(270, 100%, 85%);
+  border-radius: 3px;
+  color: hsl(270, 100%, 25%);
+  margin-top: 20px;
+  padding: 8px 0px;
+  text-align: center;
+  width: 100px;
+}
+
+@media only screen and (min-width: 570px) {
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.6rem;
+  }
+}
