@@ -7,16 +7,6 @@
     "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/autumnchris/exercise-tracker-api.git"
-  },
-  "author": "autumnchris",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/autumnchris/exercise-tracker-api/issues"
-  },
-  "homepage": "https://autumnchris-exercise-tracker.herokuapp.com",
   "dependencies": {
     "body-parser": "^1.18.3",
     "ejs": "^3.0.1",
